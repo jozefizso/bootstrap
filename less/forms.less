@@ -22,7 +22,7 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: @baseLineHeight * 1.5;
+  //margin-top: @baseLineHeight * 1.5;
   font-size: @baseFontSize * 1.5;
   line-height: @baseLineHeight * 2;
   color: @grayDark;
@@ -116,17 +116,17 @@ input[type="color"],
 .uneditable-input {
   background-color: @inputBackground;
   border: 1px solid @inputBorder;
-  .border-radius(@inputBorderRadius);
-  .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+  // .border-radius(@inputBorderRadius);
+  //.box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
   @transition: border linear .2s, box-shadow linear .2s;
   .transition(@transition);
 
   // Focus state
   &:focus {
-    border-color: rgba(82,168,236,.8);
+    border-color: fade(@themeColor, 0.8); //rgba(82,168,236,.8);
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
-    .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)");
+    //.box-shadow(~"inset 0 1px 1px" fade(@bodyBackgroundInv, .075) ~", 0 0 8px " fade(@themeColor, 0.6));
   }
 }
 
@@ -327,7 +327,7 @@ select:focus:required:invalid {
   padding: (@baseLineHeight - 1) 20px @baseLineHeight;
   margin-top: @baseLineHeight;
   margin-bottom: @baseLineHeight;
-  background-color: @formActionsBackground;
+  //background-color: @formActionsBackground;
   border-top: 1px solid #e5e5e5;
   .clearfix(); // Adding clearfix to allow for .pull-right button containers
 }
@@ -383,7 +383,7 @@ select:focus:required:invalid {
     margin-bottom: 0; // prevent bottom margin from screwing up alignment in stacked forms
     *margin-left: 0;
     vertical-align: middle;
-    .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+    //.border-radius(0 @inputBorderRadius @inputBorderRadius 0);
     // Make input on top when focused so blue border and shadow always show
     &:focus {
       z-index: 2;
@@ -423,7 +423,7 @@ select:focus:required:invalid {
   }
   .add-on:first-child,
   .btn:first-child {
-    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+    //.border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
   }
 }
 .input-append {
