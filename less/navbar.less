@@ -11,17 +11,17 @@
   *z-index: 2;
 
   overflow: visible;
-  margin-bottom: @baseLineHeight;
+  //margin-bottom: @baseLineHeight;
 }
 
 // Gradient is applied to it's own element because overflow visible is not honored by IE when filter is present
 .navbar-inner {
   min-height: @navbarHeight;
-  padding-left:  20px;
-  padding-right: 20px;
-  #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
-  .border-radius(4px);
-  .box-shadow(~"0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1)");
+  //padding-left:  20px;
+  //padding-right: 20px;
+  //#gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
+  //.border-radius(4px);
+  //.box-shadow(~"0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1)");
 }
 
 // Set width to auto for default container
@@ -39,6 +39,7 @@
 // Brand, links, text, and buttons
 .navbar {
   color: @navbarText;
+  font-size: @navbarFontSize;
   // Hover and active states
   .brand:hover {
     text-decoration: none;
@@ -176,7 +177,6 @@
 }
 
 
-
 // NAVIGATION
 // ----------
 
@@ -204,7 +204,9 @@
   line-height: 19px;
   color: @navbarLinkColor;
   text-decoration: none;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  text-transform: uppercase;
+  font-weight: bold;
+  //text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 }
 // Buttons
 .navbar .btn {
@@ -355,4 +357,22 @@
     left: auto;
     right: 13px;
   }
+}
+
+
+// SUBNAVBAR
+// ---------
+.subnavbar {
+    margin-top: 0;
+    font-size: @subnavbarFontSize;
+
+    .nav > li > a {
+        text-transform: uppercase;
+        font-weight: 100;
+
+    }
+    
+    .nav > li.active > a {
+        font-weight: bold;
+    }
 }

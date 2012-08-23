@@ -22,6 +22,7 @@
 // -------------------------
 @blue:                  #1BA1E2;
 @blueDark:              #1080DD; // Nokia Blue
+@brown:                 #A05000;
 @green:                 #339933;
 @red:                   #E51400;
 @yellow:                #ffc40d;
@@ -38,7 +39,7 @@
 
 @bodyBackgroundInv:     @black;
 
-@themeColor:            @blue;
+@themeColor:            @red;
 
 // Links
 // -------------------------
@@ -149,13 +150,14 @@
 
 // Navbar
 // -------------------------
-@navbarHeight:                    40px;
-@navbarBackground:                @grayDarker;
-@navbarBackgroundHighlight:       @grayDark;
+@navbarFontSize:                  12px;
+@navbarHeight:                    30px;
+@navbarBackground:                @white;
+@navbarBackgroundHighlight:       @white;
 
 @navbarText:                      @grayLight;
 @navbarLinkColor:                 @grayLight;
-@navbarLinkColorHover:            @white;
+@navbarLinkColorHover:            @themeColor;
 @navbarLinkColorActive:           @navbarLinkColorHover;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      @navbarBackground;
@@ -165,6 +167,9 @@
 @navbarSearchBorder:              darken(@navbarSearchBackground, 30%);
 @navbarSearchPlaceholderColor:    #ccc;
 @navbarBrandColor:                @navbarLinkColor;
+
+@subnavbarFontSize:               13px;
+
 
 
 // Hero unit
